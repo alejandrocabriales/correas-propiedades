@@ -21,7 +21,7 @@ import {
 
 import { themeSessionResolver } from "./sessions.server";
 
-import "./tailwind.css";
+import "tailwind.css";
 import { Header } from "./components/layouts/Header";
 import Footer from "./components/Footer";
 
@@ -38,8 +38,6 @@ export const meta: MetaFunction = () => {
 
 export const links: LinksFunction = () => [
   { rel: "icon", href: "/favicon.ico" },
-  { rel: "stylesheet", href: "/styles/tailwind.css" },
-  { rel: "stylesheet", href: "/styles/theme.css" },
 ];
 
 const isDevelopment = process.env.NODE_ENV === "development";
