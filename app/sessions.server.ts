@@ -1,5 +1,5 @@
 import { createCookieSessionStorage } from "@remix-run/node";
-import { createThemeSessionResolver } from "remix-themes";
+// import { createThemeSessionResolver } from "remix-themes";
 
 const isProduction = process.env.NODE_ENV === "production";
 
@@ -14,4 +14,4 @@ const sessionStorage = createCookieSessionStorage({
   },
 });
 
-export const themeSessionResolver = createThemeSessionResolver(sessionStorage);
+// export const themeSessionResolver = createThemeSessionResolver(sessionStorage);
