@@ -45,14 +45,14 @@ export function useTheme(): Theme | undefined {
   return theme;
 }
 
-type ClassValue =
-  | string
-  | number
-  | boolean
-  | undefined
-  | null
-  | ClassDictionary
-  | ClassArray;
+// type ClassValue =
+//   | string
+//   | number
+//   | boolean
+//   | undefined
+//   | null
+//   | ClassDictionary
+//   | ClassArray;
 
 interface ClassDictionary {
   [id: string]: any;
