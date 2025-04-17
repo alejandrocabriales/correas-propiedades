@@ -28,31 +28,6 @@ function parseTheme(cookieHeader: string | null): Theme {
   return themeValue === "dark" ? "dark" : "light";
 }
 
-export function useTheme(): Theme | undefined {
-  const matches = useMatches();
-  const actionData = matches.find((match) => match.id === "root")?.data as
-    | {
-        theme?: Theme;
-      }
-    | undefined;
-
-  const cookieHeader = document.cookie;
-
-  const theme = useMemo(
-    () => actionData?.theme ?? parseTheme(cookieHeader),
-    [actionData?.theme, cookieHeader]
-  );
-  return theme;
-}
-
-// type ClassValue =
-//   | string
-//   | number
-//   | boolean
-//   | undefined
-//   | null
-//   | ClassDictionary
-//   | ClassArray;
 
 interface ClassDictionary {
   [id: string]: any;

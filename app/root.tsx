@@ -13,11 +13,7 @@ import type {
   LoaderFunctionArgs,
   MetaFunction,
 } from "@remix-run/node";
-import {
-  PreventFlashOnWrongTheme,
-  ThemeProvider,
-  useTheme,
-} from "remix-themes";
+
 
 import { themeSessionResolver } from "./sessions.server";
 
@@ -56,9 +52,9 @@ export async function loader({ request }: LoaderFunctionArgs) {
 export default function App() {
   const data = useLoaderData<typeof loader>();
   return (
-    <ThemeProvider specifiedTheme={data.theme} themeAction="/action/set-theme">
+    // <ThemeProvider specifiedTheme={data.theme} themeAction="/action/set-theme">
       <AppContent env={data.ENV} />
-    </ThemeProvider>
+    // </ThemeProvider>
   );
 }
 
@@ -67,14 +63,14 @@ function AppContent({
 }: {
   env: { NODE_ENV: string; isDevelopment: boolean };
 }) {
-  const [theme] = useTheme();
+  // const [theme] = useTheme();
   return (
-    <html lang="en" className={clsx(theme)}>
+    <html lang="en">
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
-        <PreventFlashOnWrongTheme ssrTheme={true} />
+        {/* <PreventFlashOnWrongTheme ssrTheme={true} /> */}
         <Links />
       </head>
       <body className="min-h-screen bg-background text-foreground">
