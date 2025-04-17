@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  @apply bg-white dark:bg-gray-950;
+
+  @media (prefers-color-scheme: dark) {
+    color-scheme: dark;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%; /* #FFFFFF */
+    --foreground: 196 11% 35%; /* #4F6064 */
+    --card: 0 0% 100%; /* #FFFFFF */
+    --card-foreground: 196 11% 35%; /* #4F6064 */
+    --popover: 0 0% 100%; /* #FFFFFF */
+    --popover-foreground: 196 11% 35%; /* #4F6064 */
+    --primary: 196 11% 35%; /* #4F6064 */
+    --primary-foreground: 0 0% 100%; /* #FFFFFF */
+    --secondary: 24 4% 52%; /* #8C8680 */
+    --secondary-foreground: 0 0% 100%; /* #FFFFFF */
+    --muted: 24 4% 52%; /* #8C8680 con opacidad */
+    --muted-foreground: 196 11% 35%; /* #4F6064 con opacidad */
+    --accent: 24 4% 52%; /* #8C8680 */
+    --accent-foreground: 0 0% 100%; /* #FFFFFF */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 196 11% 35%; /* #4F6064 con opacidad */
+    --input: 196 11% 35%; /* #4F6064 con opacidad */
+    --ring: 196 11% 35%; /* #4F6064 */
+    --chart-1: 196 11% 35%; /* #4F6064 */
+    --chart-2: 24 4% 52%; /* #8C8680 */
+    --chart-3: 0 0% 100%; /* #FFFFFF */
+    --chart-4: 196 11% 45%; /* Variación más clara de #4F6064 */
+    --chart-5: 24 4% 62%; /* Variación más clara de #8C8680 */
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 196 11% 35%; /* #4F6064 */
+    --foreground: 0 0% 100%; /* #FFFFFF */
+    --card: 196 11% 35%; /* #4F6064 */
+    --card-foreground: 0 0% 100%; /* #FFFFFF */
+    --popover: 196 11% 35%; /* #4F6064 */
+    --popover-foreground: 0 0% 100%; /* #FFFFFF */
+    --primary: 0 0% 100%; /* #FFFFFF */
+    --primary-foreground: 196 11% 35%; /* #4F6064 */
+    --secondary: 24 4% 52%; /* #8C8680 */
+    --secondary-foreground: 0 0% 100%; /* #FFFFFF */
+    --muted: 24 4% 52%; /* #8C8680 */
+    --muted-foreground: 0 0% 90%; /* Variación más clara de #FFFFFF */
+    --accent: 24 4% 52%; /* #8C8680 */
+    --accent-foreground: 0 0% 100%; /* #FFFFFF */
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 24 4% 52%; /* #8C8680 */
+    --input: 24 4% 52%; /* #8C8680 */
+    --ring: 0 0% 100%; /* #FFFFFF */
+    --chart-1: 0 0% 100%; /* #FFFFFF */
+    --chart-2: 24 4% 52%; /* #8C8680 */
+    --chart-3: 196 11% 35%; /* #4F6064 */
+    --chart-4: 24 4% 62%; /* Variación más clara de #8C8680 */
+    --chart-5: 196 11% 45%; /* Variación más clara de #4F6064 */
+  }
+}
